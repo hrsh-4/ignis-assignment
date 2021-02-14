@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<title>IGNIS TECH</title>
+	
+		<style type="text/css">
+			#brand{
+				margin : 0px 50px 0px 100px;
+				color: blue;
+
+			}
+			#navbarNavDropdown{
+				margin-right: 100px;
+			}
+			time,p{
+				color:  grey;
+			}
+			
+
+
+			@media (min-width: 768px){
+.navbar-form .form-control { 
+    width: 100%; 
+}}
+
+		</style>
+
+	</head>
+
+
+	<body>
+		{# NAVBAR #}
+
+		<nav class="  navbar navbar-expand-lg navbar-light bg-light">
+			<a  id="brand" class=" navbar-brand" href="#"><h2><b>Ignis Tech</b></h2></a>
+			
+
+			
+  <form class="form-inline my-8 my-lg-0">
+   	
+   
+    	
+    <input type="text" class="form-control search-input" placeholder=" Search for events..." style="width:400px; border-radius: 20px;">
+   
+  </form>
+
+  			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNavDropdown"
+				aria-controls="navbarNavDropdown"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div  class="container collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+				<ul   class="navbar-nav ">
+					<li class="nav-item active">
+						<a class="nav-link" href="#"
+							>Browse Events <span class="sr-only">(current)</span></a
+						>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Host Event</a>
+					</li>
+					
+					<li class="nav-item active dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="navbarDropdownMenuLink"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							Help
+						</a>
+						<div
+							class="dropdown-menu"
+							aria-labelledby="navbarDropdownMenuLink"
+						>
+							<a class="dropdown-item" href="#">Help 1</a>
+							<a class="dropdown-item" href="#">Help 2</a>
+							<a class="dropdown-item" href="#"
+								>Help 3</a
+							>
+						</div>
+
+					</li>
+					<li class="nav-item  active dropdown">
+						
+							<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="navbarDropdownMenuLink"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="15" height="15"><path style="fill:blue;" fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path></svg>
+							 @harsh
+						</a>
+						<div
+							class="dropdown-menu"
+							aria-labelledby="navbarDropdownMenuLink"
+						>
+							<a class="dropdown-item" href="#">Profile</a>
+							<a class="dropdown-item" href="#">Settings</a>
+							
+						</div>
+						
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+
+<br>
+		 <div >
+		 	<div align="center" class="container">
+		 		
+		 			<b><h1 ><b>Likes</b></h1></b>
+		 		
+		 	</div>
+		 	<br>
+		 	{% for event in events %}
+<br>
+		 		<div  style="width: 50%"  class="container">
+		 	<div style="border-radius: 20px" class="card flex-row flex-wrap">
+       
+            <img style="border-radius: 20px" width="300px" height="200px" src={{event.image}} alt="">
+        <div style="float: right; width : 50%; margin:20px" class="card-block">
+            <h4 class="card-title">{{event.name}}</h4>
+            <time>{{event.time}}</time>
+            <p>Starts at Rs.{{event.price}}</p>
+            <br>
+            <div align="right">
+            	
+            	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M8.53 1.22a.75.75 0 00-1.06 0L3.72 4.97a.75.75 0 001.06 1.06l2.47-2.47v6.69a.75.75 0 001.5 0V3.56l2.47 2.47a.75.75 0 101.06-1.06L8.53 1.22zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"></path></svg>
+
+            	&nbsp;&nbsp;&nbsp;
+            	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path style="fill:red;" fill-rule="evenodd" d="M7.655 14.916L8 14.25l.345.666a.752.752 0 01-.69 0zm0 0L8 14.25l.345.666.002-.001.006-.003.018-.01a7.643 7.643 0 00.31-.17 22.08 22.08 0 003.433-2.414C13.956 10.731 16 8.35 16 5.5 16 2.836 13.914 1 11.75 1 10.203 1 8.847 1.802 8 3.02 7.153 1.802 5.797 1 4.25 1 2.086 1 0 2.836 0 5.5c0 2.85 2.045 5.231 3.885 6.818a22.075 22.075 0 003.744 2.584l.018.01.006.003h.002z"></path></svg>
+            	
+           
+            </div>
+        </div>
+
+       
+		 </div>
+      
+       
+    </div>
+
+		 	{% endfor %}
+
+<br>
+      
+      
+	</body>
+</html>
